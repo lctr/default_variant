@@ -2,14 +2,19 @@
 name = "default_variant"
 version = "0.1.0"
 edition = "2021"
-description = "A proc-macro for specifying the variants or values to be used when deriving `Default` in enums"
+description = "A proc-macro for specifying the variants or values to be used when deriving `Default` in enums."
+repository = "https://github.com/lctr/default_variant"
+readme = "README.md"
+keywords = ["enum", "variant", "default"]
+license = "MIT OR Apache-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
+name = "default_variant"
 proc-macro = true
 
 [dependencies]
-syn = { version = "1.0.77", features = ["extra-traits", "full"] }
+proc-macro2 = "1.0"
 quote = "1.0.9"
-proc-macro2 = { version = "1.0" }
+syn = { version = "1.0.77", features = ["extra-traits", "full"] }
